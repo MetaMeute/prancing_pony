@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111021013956) do
+ActiveRecord::Schema.define(:version => 20111021025335) do
+
+  create_table "prancing_pony_stocks", :force => true do |t|
+    t.string   "name",       :null => false
+    t.decimal  "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "prancing_pony_stocks", ["name"], :name => "index_prancing_pony_stocks_on_name"
 
   create_table "users", :force => true do |t|
     t.string   "nick"
