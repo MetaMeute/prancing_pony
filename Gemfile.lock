@@ -148,6 +148,7 @@ PLATFORMS
 DEPENDENCIES
   cucumber-rails
   database_cleaner
+  haml
   jquery-rails
   prancing_pony!
   rspec-rails
