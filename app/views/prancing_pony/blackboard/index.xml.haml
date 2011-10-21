@@ -1,2 +1,4 @@
 %blackboard
-  = @users.each { |u| render 'user/show', u } if @users
+  - @users.each do |u|
+    = render :partial => 'prancing_pony/user/show', :locals => { :user => u }
+
