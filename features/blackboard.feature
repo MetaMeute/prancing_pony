@@ -8,18 +8,18 @@ Feature: the blackboard
     And the counter for "beer" is at "43"
     And the counter for "mate" is at "24"
     And the blackboard lists these values:
-      | name   | drunk | to pay |
-      | Robert | 22    | 0      |
-      | Mike   | 22    | 0      |
-      | Matze  | 9001  | 100    |
+      | name   | drunk | debit |
+      | Robert | 22    | 0     |
+      | Mike   | 22    | 0     |
+      | Matze  | 9001  | 100   |
 
   Scenario: Get an overview
     Given I do nothing
     Then the blackboard lists these values:
-      | name   | drunk | to pay |
-      | Robert | 22    | 0      |
-      | Mike   | 22    | 0      |
-      | Matze  | 9001  | 100    |
+      | name   | drunk | debit |
+      | Robert | 22    | 0     |
+      | Mike   | 22    | 0     |
+      | Matze  | 9001  | 100   |
     And the counter for "beer" is at "43"
     And the counter for "mate" is at "24"
   
@@ -40,7 +40,7 @@ Feature: the blackboard
 
   Scenario: Pay the bill
     Given I am logged in as "Matze"
-    When I fill in "90" within "to pay"
+    When I fill in "90" within "pay"
     And I press "Pay!"
     Then my credit should be at "10"
 
