@@ -11,7 +11,7 @@ module NavigationHelpers
     when /^the home\s?page$/
       '/'
     when /the blackboard page/
-      blackboard_path
+      '/prancing_pony/blackboard'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
