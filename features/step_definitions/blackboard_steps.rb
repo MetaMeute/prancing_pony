@@ -15,3 +15,15 @@ Given /^the blackboard lists these values:$/ do |table|
   end
 end
 
+Then /^the blackboard should list these values:$/ do |table|
+  table.hashes.each do |row|
+    name = row[:name]
+    page.should have_css("table td##{name}_drunk", :text => row[:drunk])
+    page.should have_css("table td##{name}_debit", :text => row[:debit])
+  end
+end
+
+Then /^the counter for "([^"]*)" should be at "([^"]*)"$/ do |good, amount|
+  page.should have_css("##{good}_counter", :text => amount)
+end
+
