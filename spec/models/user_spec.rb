@@ -1,16 +1,20 @@
 require 'spec_helper'
 
 describe User do
-  it "should have a nick" do
+  before(:each) do
     User.create!(:nick => "Robert")
   end
+  let(:user) { User.find_by_nick "Robert" }
+
+  it "should have a nick" do
+    user.nick.should eq("Robert")
+  end
+
   it "should store the amount of drunken things" do
-    u = User.create!(:nick => "Robert")
-    u.drunk = 100
+    user.drunk = 100
   end
 
   it "should store the debit of a user" do
-    u = User.create!(:nick => "Robert")
-    u.debit = 50
+    user.debit = 50
   end
 end
