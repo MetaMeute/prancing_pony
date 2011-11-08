@@ -15,13 +15,13 @@ Feature: the blackboard
 
   Scenario: Get an overview
     Given I do nothing
-    Then the blackboard lists these values:
+    Then the blackboard should list these values:
       | name   | drunk | debit |
       | Robert | 22    | 0     |
       | Mike   | 22    | 0     |
       | Matze  | 9001  | 100   |
-    And the counter for "beer" is at "43"
-    And the counter for "mate" is at "24"
+    And the counter for "beer" should be at "43"
+    And the counter for "mate" should be at "24"
   
   Scenario: Chalk up a drink for myself
     Given I am logged in as "Robert"
