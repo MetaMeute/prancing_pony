@@ -3,4 +3,10 @@
     %th Name
     %th Drunk
     %th Debit
+  %tbody
+    - @users.each do |user|
+      %tr{ :id => user.nick }
+        %td{ :id => "#{user.nick}_name" }= user.nick
+        %td{ :id => "#{user.nick}_drunk" }= user.drunk
+        %td{ :id => "#{user.nick}_debit" }= user.debit
 
