@@ -10,3 +10,12 @@
         %td{ :id => "#{user.nick}_drunk" }= user.drunk
         %td{ :id => "#{user.nick}_debit" }= user.debit
 
+%ul#stock_information
+  - @stock.each do |good|
+    %li
+      There should be
+      %span{ :id => "#{good.name}_counter" }= good.amount
+      bottles of
+      = good.name
+      left.
+
