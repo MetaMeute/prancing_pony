@@ -4,14 +4,14 @@ Feature: the blackboard
   want to have a blackboard.
 
   Background:
-    Given I am on the blackboard page
-    And the counter for "beer" is at "43"
+    Given the counter for "beer" is at "43"
     And the counter for "mate" is at "24"
     And the blackboard lists these values:
       | name   | drunk | debit |
       | Robert | 22    | 0     |
       | Mike   | 22    | 0     |
       | Matze  | 9001  | 100   |
+    Given I am on the blackboard page
 
   Scenario: Get an overview
     Given I do nothing
