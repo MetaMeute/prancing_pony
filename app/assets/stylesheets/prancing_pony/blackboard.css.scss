@@ -1,4 +1,19 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+table#blackboard {
+  margin: 5px;
+  padding: 10px;
+  border: ridge #8f583f 10px;
+  box-shadow:inset 0 0 7px #000000;
+  background-color: #2f5812;
+  color: #F8F8F8;
+
+  td:first-child {
+    padding-right: 3em;
+  }
+  .drunk, .debit {
+    padding-right: 1em;
+  }
+  td.drunk, td.debit {
+    text-align: right;
+  }
+}
+

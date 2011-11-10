@@ -1,14 +1,14 @@
 %table#blackboard
   %thead
-    %th Name
-    %th Drunk
-    %th Debit
+    %th.name Name
+    %th.drunk Drunk
+    %th.debit Debit
   %tbody
     - @users.each do |user|
       %tr{ :id => user.nick }
-        %td{ :id => "#{user.nick}_name" }= user.nick
-        %td{ :id => "#{user.nick}_drunk" }= user.drunk
-        %td{ :id => "#{user.nick}_debit" }= user.debit
+        %td.name{ :id => "#{user.nick}_name" }= user.nick
+        %td.drunk{ :id => "#{user.nick}_drunk" }= user.drunk
+        %td.debit{ :id => "#{user.nick}_debit" }= number_to_currency user.debit, :unit => '€', :format => '%n %u', :separator => ',', :delimiter => ' '
 
 %ul#stock_information
   - @stock.each do |good|
