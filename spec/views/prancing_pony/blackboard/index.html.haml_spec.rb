@@ -53,6 +53,8 @@ describe "prancing_pony/blackboard/index.html.haml" do
     it "should render information about the stock" do
       rendered.should have_content("42.0 bottles of Beer left")
       rendered.should have_content("23.0 bottles of Club-Mate left")
+      rendered.should have_css("#Beer_counter", :text => "42")
+      rendered.should have_css("#Club-Mate_counter", :text => "23")
     end
   end
 end
