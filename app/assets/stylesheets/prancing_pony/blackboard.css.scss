@@ -1,4 +1,15 @@
+@font-face {
+  font-family: Rudiment;
+  src: url("Rudiment.eot") /* EOT file for IE */
+}
+@font-face {
+  font-family: Rudiment;
+  src: url("Rudiment.ttf") /* TTF file for CSS3 browsers */
+}
+
 table#blackboard {
+  font-family: Rudiment;
+  font-size: 14pt;
   margin: 5px;
   padding: 10px;
   border: ridge #8f583f 10px;
