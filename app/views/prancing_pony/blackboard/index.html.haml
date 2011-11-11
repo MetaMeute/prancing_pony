@@ -14,7 +14,7 @@
   - @stock.each do |good|
     %li
       There should be
-      %span{ :id => "#{good.name}_counter" }= good.amount
+      %span{ :id => "#{good.name}_counter" }= number_to_human good.amount, :separator => ','
       bottles of
       = good.name
       left.
