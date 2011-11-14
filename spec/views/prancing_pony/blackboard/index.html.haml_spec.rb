@@ -34,8 +34,8 @@ describe "prancing_pony/blackboard/index.html.haml" do
       it "should render all users with their data" do
         User.all.each do |u|
           rendered.should have_css("table#blackboard td", :text => u.nick)
-          rendered.should have_css("table#blackboard td##{u.nick}_drunk", :text => u.drunk.to_s)
-          rendered.should have_css("table#blackboard td##{u.nick}_debit", :text => u.debit.to_s)
+          rendered.should have_css("table#blackboard td##{u.nick}_drunk", :text => /#{u.drunk.to_s}/ )
+          rendered.should have_css("table#blackboard td##{u.nick}_debit", :text => /#{u.debit.to_s}/)
         end
       end
     end
@@ -51,8 +51,8 @@ describe "prancing_pony/blackboard/index.html.haml" do
     end
 
     it "should render information about the stock" do
-      rendered.should have_content("42.0 bottles of Beer left")
-      rendered.should have_content("23.0 bottles of Club-Mate left")
+      rendered.should have_content("42 bottles of Beer left")
+      rendered.should have_content("23 bottles of Club-Mate left")
       rendered.should have_css("#Beer_counter", :text => "42")
       rendered.should have_css("#Club-Mate_counter", :text => "23")
     end
