@@ -29,3 +29,23 @@ Then /^the counter for "([^"]*)" should be at "([^"]*)"$/ do |good, amount|
   page.should have_css("##{good}_counter", :text => amount)
 end
 
+Given /^I am logged in as "([^"]*)"$/ do |name|
+  User.class_eval do
+    def current_user
+      User.find_by_nick name
+    end
+  end
+end
+
+Then /^my drinking counter should be at "([^"]*)"$/ do |arg1|
+    pending # express the regexp above with the code you wish you had
+end
+
+Then /^my credit should be at "([^"]*)"$/ do |arg1|
+    pending # express the regexp above with the code you wish you had
+end
+
+Then /^the counter for "([^"]*)" should be "([^"]*)"$/ do |arg1, arg2|
+    pending # express the regexp above with the code you wish you had
+end
+

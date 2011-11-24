@@ -23,6 +23,7 @@ Feature: the blackboard
     And the counter for "beer" should be at "43"
     And the counter for "mate" should be at "24"
   
+  @wip
   Scenario: Chalk up a drink for myself
     Given I am logged in as "Robert"
     When I press "Beer!"

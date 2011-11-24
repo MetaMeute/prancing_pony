@@ -18,4 +18,9 @@
       bottles of
       = good.name
       left.
+      - if user_signed_in? then
+        You can drink a bottle of
+        = good.name
+        by clicking
+        = image_submit_tag image_for_good(good), :name => "drink_#{good.name}", :id => "drink_good_#{good.name}", :class => "drink"
 
